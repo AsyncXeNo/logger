@@ -57,7 +57,7 @@ class Logger():
 		self.display(loginfo, msg, msg_style, msg_color)
 
 	def log_alert(self, msg):
-		msg_style = self.styles['negative2']
+		msg_style = self.styles[None]
 		msg_color = self.colors['yellow']
 
 		loginfo = 'ALERT'
@@ -85,7 +85,7 @@ class Logger():
 
 	# display
 	def display(self, loginfo, msg, msg_style, msg_color):
-		print(f'{self.escape_code}{msg_style};{msg_color}{self.end_escape}[{self.convert_string_size(loginfo, 11)}] {msg}{self.end}')
+		print(f'{self.escape_code}{msg_style};{msg_color}{self.end_escape}[{self.convert_string_size(loginfo, 9)}] {msg}{self.end}')
 
 
 	#info
